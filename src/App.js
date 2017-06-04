@@ -96,9 +96,33 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <p>Hello World</p>
-            </div>
+            <div className="app col-sm-6 col-md-6">
+        		<div>
+        			<h1 className="titlu">Movies with react</h1>
+        		</div>
+        		<h1>Looking for a specific movie?</h1>
+        		<form className="form">
+        			 <input type="text"
+        				   onChange={this.searchHandler}
+        				   value={this.term}
+        				   max="30"
+        				   size="40"
+        				   placeholder="Search..."
+        			/>
+
+        		</form>
+	        	{
+	        		this.state.movies.filter(searchingFor(this.state.term)).map( movie =>
+	        					<div key={movie.id} className="col-sm-6 col-md-6">
+	        						<ul className="filme">
+	        							<li>{movie.title}</li>
+	        							<li>{movie.year}</li>
+	        						</ul>
+	        					</div>
+	        				)
+	        	}
+	        	
+     		</div>
         );
     }
 }
