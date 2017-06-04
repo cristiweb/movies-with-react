@@ -75,6 +75,19 @@ const movies =[
 
 class App extends Component {
 
+	constructor (props){
+   		super(props);
+   		this.state={
+   			movies: movies,
+   			term: '',
+   		}
+   		this.searchHandler = this.searchHandler.bind(this);
+   }
+  
+   searchHandler(event){
+   		this.setState({term: event.target.value})
+   }
+
     render() {
         return (
             <div>
