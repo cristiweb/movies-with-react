@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  background-color: #f0f0f5;
 }
 ol, ul {
   list-style: none;
@@ -45,4 +46,38 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+.app{
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border:1px solid black;
+   border-radius: 10px;
+   background-color: #e6e6e6;
+}
+.form{
+  margin:10px;
+  justify-content: center;
+  left: 35%;
+  position: relative;
+}
+.filme{
+  margin:10px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  justify-content: center;
+  background-color: #66ccff;
+  text-align: center;
+}
+h1{
+  padding:10px;
+  position: relative;
+  left: 38%;
+  font-weight: bold;
+}
+.titlu{
+  font-size: 35px;
+  padding-top: 10px;
+  padding-bottom: 25px;
 }
