@@ -73,6 +73,12 @@ const movies =[
 	}
 ]
 
+function searchingFor(term){
+	return function(x){
+		return x.title.toLowerCase().includes(term.toLowerCase()) || !term;
+	}
+}
+
 class App extends Component {
 
 	constructor (props){
